@@ -18,29 +18,6 @@ fn main() {
     println!("{} is {}", arg, str);
 }
 
-// Oh, lets also make a trait .is_odd()
-
-trait IsOdd {
-    fn is_odd(&self) -> bool;
-}
-
-/// Macro to implement it, clean code 100%
-macro_rules! impl_is_odd {
-    ($($t:ty),*) => {
-        $(
-            impl IsOdd for $t {
-                fn is_odd(&self) -> bool {
-                    self % 2 != 0
-                }
-            }
-        )*
-    };
-}
-
-// Implementation for every common number type.
-impl_is_odd!(i8, i16, i32, i64, i128, u8, u16, u32, u64, u128);
-
-/// Function to use as a library.
 fn is_odd(num: u128) -> bool {
     num % 2 == 1
 }

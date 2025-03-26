@@ -1,6 +1,6 @@
 [package]
 name = "is-odd-rs"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 license = "AGPL-3.0"
 description = "a stupid program to check if the number is odd or even. written in rust. may be used as a library"

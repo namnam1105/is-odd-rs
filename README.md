@@ -1,14 +1,9 @@
 # is-odd-rs
 
-A program (or a library) to check if an integer is odd or even.
+A program to check if an integer is odd or even.
 written in rust.
 
 ## Available on [crates.io](https://crates.io/crates/is-odd-rs)
-
-ADD AS LIBRARY:
-```bash
-    cargo add is-odd-rs
-```
 
 INSTALL WITH `cargo`:
 ```bash
