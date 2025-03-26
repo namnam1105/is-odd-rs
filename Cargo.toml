@@ -2,6 +2,8 @@
 name = "is-odd-rs"
 version = "0.1.0"
 edition = "2021"
+license = "AGPL-3"
+description = "a stupid program to check if the number is odd or even. written in rust. may be used as a library"
 
 [dependencies]
 
