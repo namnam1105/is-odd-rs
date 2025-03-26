@@ -13,7 +13,14 @@ fn main() {
         std::process::exit(1);
     }
     let arg = &args.nth(1).unwrap();
-    let odd = is_odd(arg.parse::<u128>().unwrap());
+    let parsed = arg.parse::<u128>();
+    if parsed.is_err() {
+        eprintln!("\x1b[1m\x1b[31mFatal. \x1b[39mInvalid number. (overflow over 128 bit unsigned integer limit)");
+        eprintln!("USAGE: is-odd [number]\x1b[0m");
+        std::process::exit(1);
+    }
+    let odd = is_odd(parsed.unwrap());
+
     let str = if odd { "odd" } else { "even" };
     println!("{} is {}", arg, str);
 }
