@@ -1,0 +1,11 @@
+[package]
+name = "is-odd-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+
+[[bin]]
+name = "is-odd"
+path = "src/main.rs"
